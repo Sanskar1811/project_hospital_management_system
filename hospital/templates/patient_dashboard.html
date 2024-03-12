@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Patient Section </title>
+    <style>
+        * {font-size : 35px ;}
+        body { background-color: lightgoldenrodyellow;}
+
+        
+    </style>
+</head>
+<body>
+    <center>
+    <h1> Fill the Form </h1>
+    <form method = "POST" enctype="multipart/form-data">
+    {%  csrf_token  %}
+    <a href="main"> Exit Patient Section </a>
+    <table>
+
+        {{  fm.as_table }}
+
+    </table>
+    <br>
+    <input type = "submit" />
+    </form>
+    <h2> {{  msg  }} </h2>
+</center>
+</body>
+</html>

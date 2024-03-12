@@ -1,0 +1,43 @@
+{%  extends 'base.html'  %}
+
+
+{%  block content %}
+<h1> Doctor Section  </h1>
+{% if user.is_authenticated %}
+    <h2>Welcome Dr.{{ user.username }}</h2>
+
+{%  endif  %}
+
+	<table border="5" style="width:100%;">
+		<tr>
+            <th> Patient Id  </th>
+			<th> First Name </th>
+			<th> Last Name </th>
+			<th> Disease </th>
+            <th> Patient Status </th>
+            
+		</tr>
+		{% for d in data %}
+		<tr style="text-align:center;">
+            <td> {{   d.patient_id  }}      </td>
+			<td> {{  d.first_name }} </td>
+			<td> {{  d.last_name  }} </td>
+			<td> {{  d.disease  }} </td>
+			<td> <a href="{%  url  'remp'  id=d.patient_id %}" 
+				onclick="return confirm('Are u sure that u have checked patient ???')"> Uncheck </a> </td>
+				{%  empty  %}
+					<tr style="text-align:center;">
+					<td colspan=5> No Patient Found </td>
+					</tr>
+		
+        
+			</tr>
+		{%  endfor  %}
+
+
+	</table>
+
+
+
+
+{%  endblock  %}

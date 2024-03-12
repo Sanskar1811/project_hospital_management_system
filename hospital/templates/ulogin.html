@@ -1,0 +1,26 @@
+{%  extends 'base.html'  %}
+
+
+{%  block content %}
+<h1> Login To Enrolled into Doctor Section </h1>
+
+<form method = "POST">
+{%  csrf_token  %}
+
+<a href="main" id="cf">Exit Doctor Section</a>
+
+<br><br>
+<input type = "text"   name="un"  placeholder="Enter username :"  required/>
+<br><br>
+<input type = "password"   name="pw"  placeholder="Enter password :"  required/>
+<br><br>
+
+<input type="submit"  value="Login" /> 
+<h2> {{  msg  }}  </h2>
+
+
+
+</form>
+
+
+{%  endblock  %}

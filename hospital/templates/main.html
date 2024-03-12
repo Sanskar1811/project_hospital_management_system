@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    * {font-size : 40px ;}
+    body {background-color: snow;}
+    #cl{text-decoration: none;}
+    
+    </style>
+</head>
+<body>
+<center>
+    <h1> Select User Type  </h1>
+    <form method="POST">
+        {% csrf_token %}
+    <input type = "radio"  name = "hos"  value = "pat" id="p" />
+    <label for="patient"> Patient Section </label><br>
+    <input type = "radio"  name = "hos"  value = "doc" id="r"/>
+    <label for="doctor">Doctor Section </label><br><br>
+    <input type = "submit" value = "Enrolled" style="color:darkgoldenrod;"/>
+    </form>
+    <br>
+    <a href="{% url 'home' %}" id="cl">Exit Hospital</a>
+</center>
+</body>
+</html>
