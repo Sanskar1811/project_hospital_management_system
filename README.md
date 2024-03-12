@@ -1,6 +1,1 @@
-The title of the project is Hospital Management System.
-Teck stack used during project : python, django and dtl(django template language), html , css.
-In this project , I have done 2 sections in Hospital : 1. Patient , 2. Doctor
-In patient section , there is a form to fill up patient details such as name , disease like that , In doctor section , i have developed authentication system to validate the doctors 
-First doctors has to create their account and then can see the patients appointment alloted in hospital. If the patient has been checked then doctors can remove them from the list to confirm the 
-authority to patient has been checked already. Also in doctor section , there is a functionality to change the password if the doctor has been authenticated.
+The Title of the project is Hospital Management System . Tech stack used during projects :  Python ,  Django , DTL(Django Template Language) , HTML , CSS . I developed two pivotal sections: Patient and Doctor. In the Patient section, I crafted a user-friendly form for capturing patient details like name and disease. Meanwhile, in the Doctor section, I implemented an authentication system ensuring only verified doctors gain access. Doctors can seamlessly create accounts, view patient appointments, and mark them as checked post-examination. Additionally, I integrated a password change functionality for enhanced security.
